@@ -12,4 +12,14 @@ Test::Test()
 {
 }
 
-
+Test::testEmptyList()
+{
+    LinkedListOfInts testList;
+    if(testList.isEmpty() || testList.size != 0)
+    {
+        std::cout << "Test 1 - Create Empty List: PASSED";
+    }
+    else{
+        std::cout << "Test 1 - Create Empty List: FAILED";
+    }
+}
