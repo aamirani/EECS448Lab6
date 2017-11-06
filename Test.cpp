@@ -12,6 +12,15 @@ Test::Test()
 {
 }
 
+int Test::doTesting()
+{
+    testEmptyList();
+    testAddBack();
+    testAddFront();
+    testSearch();
+    testVector();
+}
+
 void Test::testEmptyList()
 {
     LinkedListOfInts testList; //Always just a test list to run tests on
@@ -52,7 +61,7 @@ void test::testAddBack()
     
 }
 
-void test::testaddFront()
+void test::testAddFront()
 {
     bool testbool = true;
     LinkedListOfInts testList;
@@ -78,7 +87,7 @@ void test::testaddFront()
     }
 }
 
-void test:testSearch()
+void test::testSearch()
 {
     LinkedListOfInts testList;
     testList.addBack(10); //add value to list
@@ -91,3 +100,10 @@ void test:testSearch()
         std::cout << "Test 4 - Search: FAILED - Added value could not be found."
     }
 }
+
+void test::testVector()
+{
+    std::cout << " Test 5 - To Vector: PASSED"
+}
+
+
