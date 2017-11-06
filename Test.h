@@ -9,7 +9,7 @@
 #define TEST_H
 
 #include <stdio.h>
-#include "LinkedListofInts.h"
+#include "LinkedListOfInts.h"
 #include <string>
 #include <vector>
 
@@ -24,6 +24,6 @@ public:
     void testVector();
     void testRemoveBack();
     void testRemoveFront();
-}
+};
 
 #endif /* Test_h */

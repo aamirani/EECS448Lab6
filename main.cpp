@@ -6,7 +6,7 @@
 */
 #include <iostream>
 #include "LinkedListOfInts.h"
-#inlcude "Test.h"
+#include "Test.h"
 
 int main(int argc, char** argv)
 {
@@ -16,6 +16,8 @@ int main(int argc, char** argv)
 	//Example:
 	//TestSuite myTester;
 	//myTester.runTests();
+    Test myTester;
+    myTester.doTesting();
 
 	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
 	
