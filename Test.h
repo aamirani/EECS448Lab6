@@ -17,13 +17,13 @@ class Test{
 public:
     Test();
     int doTesting();
-    bool testEmptyList();
-    bool testAddBack();
-    bool testAddFront();
-    bool testSearch();
-    bool testVector();
-    bool testRemoveBack();
-    bool testRemoveFront();
+    void testEmptyList();
+    void testAddBack();
+    void testAddFront();
+    void testSearch();
+    void testVector();
+    void testRemoveBack();
+    void testRemoveFront();
 }
 
 #endif /* Test_h */

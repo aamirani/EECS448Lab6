@@ -4,5 +4,12 @@
 //
 //  Created by Armaan Amirani on 11/6/17.
 //
+#include <iostream>
+#include "Test.h"
+#include "LinkedListOfInts.h"
 
-#include "Test.hpp"
+Test::Test()
+{
+}
+
+
