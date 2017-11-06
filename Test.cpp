@@ -106,4 +106,29 @@ void test::testVector()
     std::cout << " Test 5 - To Vector: PASSED"
 }
 
-
+void test::testRemoveBack()
+{
+    bool testbool = true;
+    LinkedListOfInts testList; //populate list
+    for(int i = 0; i < 10; i++)
+    {
+        testList.addBack(i);
+    }
+    int testSize = testList.size(): //get current size
+    if(!testList.removeBack()) //check for successful return
+    {
+        testbool = false;
+    }
+    if(testList.size() == testSize-1) //finally check to make sure the size of list is now smaller
+    {
+        testbool = true;
+    }
+    if(testbool)
+    {
+        std::cout << "Test 6 - Remove Back: PASSED";
+    }
+    else
+    {
+        std::cout << "Test 6 - Remove Back: FAILED - Did not remove from back of list."
+    }
+}
