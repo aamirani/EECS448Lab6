@@ -19,6 +19,8 @@ int Test::doTesting()
     testAddFront();
     testSearch();
     testVector();
+    testRemoveBack();
+    testRemoveFront();
 }
 
 void Test::testEmptyList()
@@ -130,5 +132,36 @@ void test::testRemoveBack()
     else
     {
         std::cout << "Test 6 - Remove Back: FAILED - Did not remove from back of list."
+    }
+}
+
+void test::testRemoveFront()
+{
+    bool testbool = true;
+    LinkedListOfInts testList;
+    for(int i = 0; i < 10; i++) //popualte list
+    {
+        testList.addBack(i)
+    }
+    if(!testList.removeFront())
+    {
+        testbool = false;
+    }
+    if(testbool)
+    {
+        int testSize = testList.size();
+        testList.testRemoveFront();
+        if(testSize != testList.size()-1)
+        {
+            testbool = false;
+        }
+    }
+    if(testbool)
+    {
+        std::cout << "Test 7 - Remove Front: PASSED"
+    }
+    else
+    {
+        std::cout << "Test 7 - Remove Front: FAILED - Removing a value from the front failed."
     }
 }
