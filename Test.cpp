@@ -12,7 +12,7 @@ Test::Test()
 {
 }
 
-Test::testEmptyList()
+void Test::testEmptyList()
 {
     LinkedListOfInts testList; //Always just a test list to run tests on
     if(testList.isEmpty() && testList.size() == 0) //Check if the new list is empty and size is 0
@@ -24,9 +24,9 @@ Test::testEmptyList()
     }
 }
 
-test::testAddBack()
+void test::testAddBack()
 {
-    testbool = true;
+    bool testbool = true;
     LinkedListOfInts testList;
     for(int i = 0; i < 10; i++) //addBack 0..9
     {
@@ -43,11 +43,37 @@ test::testAddBack()
     }
     if(testbool == false)
     {
-        std::cout << "Test 2 - Add Back: FAILED - Not added to list correctly"
+        std::cout << "Test 2 - Add Back: FAILED - Not added to list correctly";
     }
     else
     {
-        std::cout << "Test 2 - Add Back: PASSED"
+        std::cout << "Test 2 - Add Back: PASSED";
     }
     
+}
+
+void test::addFront()
+{
+    bool testbool = true;
+    LinkedListOfInts testList;
+    for(int i = 0; i < 10; i++) // add 0..9 to front so order should be 9...0
+    {
+        testList.addFront(i)
+    }
+    std::vector<int> testVector = testList.toVector();
+    for(int i = 9; i >= 0; i--)
+    {
+        if(testVector[i] != i)
+        {
+            testbool = false;
+        }
+    }
+    if(testbool == false)
+    {
+        std::cout << "Test 3 - Add Front: FAILED - Numbers not added in correct order to front";
+    }
+    else
+    {
+        std::cout << "Test 3 - Add Front: PASSED";
+    }
 }
