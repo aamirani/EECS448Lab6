@@ -52,7 +52,7 @@ void test::testAddBack()
     
 }
 
-void test::addFront()
+void test::testaddFront()
 {
     bool testbool = true;
     LinkedListOfInts testList;
@@ -60,8 +60,8 @@ void test::addFront()
     {
         testList.addFront(i)
     }
-    std::vector<int> testVector = testList.toVector();
-    for(int i = 9; i >= 0; i--)
+    std::vector<int> testVector = testList.toVector(); //convert to vector
+    for(int i = 9; i >= 0; i--) //checks for values from 9...0 order
     {
         if(testVector[i] != i)
         {
@@ -75,5 +75,19 @@ void test::addFront()
     else
     {
         std::cout << "Test 3 - Add Front: PASSED";
+    }
+}
+
+void test:testSearch()
+{
+    LinkedListOfInts testList;
+    testList.addBack(10); //add value to list
+    if(testList.search(10)) //search, if true passed, else false
+    {
+        std::cout << "Test 4 - Search: PASSED"
+    }
+    else
+    {
+        std::cout << "Test 4 - Search: FAILED - Added value could not be found."
     }
 }
