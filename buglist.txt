@@ -1,0 +1,4 @@
+AddBack FAILS: AddBack actually adds to front.
+
+RemoveBack FAILS: There is an issue with the way it finds an empty list.
+RemoveFront FAILS: Does not remove from the front due to issues finding front.
